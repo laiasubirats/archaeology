@@ -16,7 +16,6 @@ app.config.from_object(__name__)
 app.config['SECRET_KEY'] = '7d441f27d441f27567d441f2b6176a'
  
 class ReusableForm(Form):
-    name = TextField('Name:', validators=[validators.required()])
     @app.route("/", methods=['GET', 'POST'])
     def hello():
         form = ReusableForm(request.form)
